@@ -21,6 +21,7 @@
 		27CDFE9C2E695F4500C5A66F /* Income Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CDFE9A2E695F4500C5A66F /* Income Data.xcdatamodeld */; };
 		27CDFE9F2E69657200C5A66F /* TransactionItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDFE9D2E69657200C5A66F /* TransactionItem+CoreDataClass.swift */; };
 		27CDFEA02E69657200C5A66F /* TransactionItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDFE9E2E69657200C5A66F /* TransactionItem+CoreDataProperties.swift */; };
+		27FC6B852E69953B003F6862 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FC6B842E69953B003F6862 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		27CDFE9B2E695F4500C5A66F /* Income Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Income Data.xcdatamodel"; sourceTree = "<group>"; };
 		27CDFE9D2E69657200C5A66F /* TransactionItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		27CDFE9E2E69657200C5A66F /* TransactionItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		27FC6B842E69953B003F6862 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				27CDFE9D2E69657200C5A66F /* TransactionItem+CoreDataClass.swift */,
 				27CDFE9E2E69657200C5A66F /* TransactionItem+CoreDataProperties.swift */,
 				27CDFE9A2E695F4500C5A66F /* Income Data.xcdatamodeld */,
+				27FC6B842E69953B003F6862 /* DataManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20A796E72B710D2200D33962 /* SettingsView.swift in Sources */,
+				27FC6B852E69953B003F6862 /* DataManager.swift in Sources */,
 				20FB862C2B6921BD00E430BE /* TransactionTypeModel.swift in Sources */,
 				20467A3C2B738D7000CCAF5C /* CurrencyModel.swift in Sources */,
 				20FB862A2B69213900E430BE /* TransactionModel.swift in Sources */,
