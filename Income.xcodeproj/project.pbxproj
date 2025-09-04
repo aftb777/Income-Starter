@@ -18,6 +18,9 @@
 		20FB862A2B69213900E430BE /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB86292B69213900E430BE /* TransactionModel.swift */; };
 		20FB862C2B6921BD00E430BE /* TransactionTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB862B2B6921BD00E430BE /* TransactionTypeModel.swift */; };
 		20FB862E2B69285F00E430BE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FB862D2B69285F00E430BE /* Colors.xcassets */; };
+		27CDFE9C2E695F4500C5A66F /* Income Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CDFE9A2E695F4500C5A66F /* Income Data.xcdatamodeld */; };
+		27CDFE9F2E69657200C5A66F /* TransactionItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDFE9D2E69657200C5A66F /* TransactionItem+CoreDataClass.swift */; };
+		27CDFEA02E69657200C5A66F /* TransactionItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDFE9E2E69657200C5A66F /* TransactionItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		20FB86292B69213900E430BE /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		20FB862B2B6921BD00E430BE /* TransactionTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTypeModel.swift; sourceTree = "<group>"; };
 		20FB862D2B69285F00E430BE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		27CDFE9B2E695F4500C5A66F /* Income Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Income Data.xcdatamodel"; sourceTree = "<group>"; };
+		27CDFE9D2E69657200C5A66F /* TransactionItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		27CDFE9E2E69657200C5A66F /* TransactionItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 		20FB86192B691FE700E430BE /* Income */ = {
 			isa = PBXGroup;
 			children = (
+				27CDFE992E695EE600C5A66F /* Data */,
 				206DB8A72B6A6B820076400A /* Views */,
 				20FB86282B69212200E430BE /* Model */,
 				20FB861A2B691FE700E430BE /* IncomeApp.swift */,
@@ -102,6 +109,16 @@
 				20467A3B2B738D7000CCAF5C /* CurrencyModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		27CDFE992E695EE600C5A66F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				27CDFE9D2E69657200C5A66F /* TransactionItem+CoreDataClass.swift */,
+				27CDFE9E2E69657200C5A66F /* TransactionItem+CoreDataProperties.swift */,
+				27CDFE9A2E695F4500C5A66F /* Income Data.xcdatamodeld */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,7 +198,10 @@
 				20FB862A2B69213900E430BE /* TransactionModel.swift in Sources */,
 				206DB8A92B6A6B980076400A /* TransactionView.swift in Sources */,
 				206DB8AB2B6A7ABC0076400A /* AddTransactionView.swift in Sources */,
+				27CDFE9F2E69657200C5A66F /* TransactionItem+CoreDataClass.swift in Sources */,
+				27CDFEA02E69657200C5A66F /* TransactionItem+CoreDataProperties.swift in Sources */,
 				20FB861D2B691FE700E430BE /* HomeView.swift in Sources */,
+				27CDFE9C2E695F4500C5A66F /* Income Data.xcdatamodeld in Sources */,
 				20FB861B2B691FE700E430BE /* IncomeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +408,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27CDFE9A2E695F4500C5A66F /* Income Data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27CDFE9B2E695F4500C5A66F /* Income Data.xcdatamodel */,
+			);
+			currentVersion = 27CDFE9B2E695F4500C5A66F /* Income Data.xcdatamodel */;
+			path = "Income Data.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 20FB860F2B691FE700E430BE /* Project object */;
 }
