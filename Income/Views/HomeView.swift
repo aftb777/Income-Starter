@@ -11,8 +11,9 @@ struct HomeView: View {
     @State private var transactions: [Transaction] = []
     @State private var showAddTransactionView = false
     @State private var transactionToEdit: Transaction?
-    
     @State private var showSettings = false
+    
+    @FetchRequest(sortDescriptors: []) var transactionsFetched : FetchedResults<TransactionItem>
     
     @AppStorage("orderDescending") var orderDescending = false
     @AppStorage("filterMinimum") var filterMinimum = 0.0
