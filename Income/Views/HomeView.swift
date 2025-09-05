@@ -15,6 +15,8 @@ struct HomeView: View {
     
     @FetchRequest(sortDescriptors: []) var transactionsFetched : FetchedResults<TransactionItem>
     
+    @Environment(\.managedObjectContext) private var viewContext
+    
     @AppStorage("orderDescending") var orderDescending = false
     @AppStorage("filterMinimum") var filterMinimum = 0.0
     @AppStorage("currency") var currency = Currency.usd
@@ -129,6 +131,8 @@ struct HomeView: View {
                                     .foregroundStyle(.black)
                             })
                         }
+                        
+                        // NOTE : delete operation in CoreData
                         .onDelete(perform: delete)
                     }
                     .scrollContentBackground(.hidden)
@@ -159,7 +163,15 @@ struct HomeView: View {
     }
     
     private func delete(at offsets: IndexSet) {
-        transactions.remove(atOffsets: offsets)
+        for index in offsets {
+            let transactionsToDelete = transactionsFetched[index]
+            viewContext.delete(transactionsToDelete)
+        }
+        do {
+            try viewContext.save()
+        } catch {
+            print("Error")
+        }
     }
     
 }
