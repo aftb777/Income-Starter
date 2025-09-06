@@ -5,6 +5,8 @@
 //
 
 import SwiftUI
+import CoreData
+import SwiftData
 
 struct HomeView: View {
     
@@ -14,6 +16,7 @@ struct HomeView: View {
     @State private var showSettings = false
     
     @FetchRequest(sortDescriptors: []) var transactionsFetched : FetchedResults<TransactionItem>
+    @Query var Transactions : [TransactionModel]
     
     @Environment(\.managedObjectContext) private var viewContext
     

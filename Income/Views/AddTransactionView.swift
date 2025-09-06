@@ -5,6 +5,8 @@
 //
 
 import SwiftUI
+import CoreData
+import SwiftData
 
 struct AddTransactionView: View {
     @State private var amount = 0.0
@@ -19,6 +21,8 @@ struct AddTransactionView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @AppStorage("currency") var currency = Currency.usd
+    
+    @Environment(\.modelContext) private var context
     
     var numberFormatter: NumberFormatter {
         let numberFormatter = NumberFormatter()
@@ -69,6 +73,7 @@ struct AddTransactionView: View {
                     transactions[indexOfTransaction] = transaction
                 } else {
                     
+                    // Create operation with Core Data
                     let transaction = TransactionItem(context: viewContext)
                     transaction.id = UUID()
                     transaction.title = transactionTitle
@@ -84,6 +89,12 @@ struct AddTransactionView: View {
                         showAlert = true
                         return
                     }
+                    
+                    // Create operation with Swift Data
+                    let Transaction = TransactionModel(id: UUID(), title: transactionTitle, type: selectedTransactionType, amount: amount, date: Date())
+                    
+                    context.insert(Transaction)
+                    
                     
 //                    let transaction = Transaction(title: transactionTitle, type: selectedTransactionType, amount: amount, date: Date())
 //                    transactions.append(transaction)
