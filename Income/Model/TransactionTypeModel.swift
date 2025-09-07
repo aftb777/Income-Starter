@@ -5,8 +5,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-enum TransactionType: Int, CaseIterable, Identifiable, Codable {
+enum TransactionType: Int, CaseIterable, Identifiable, Codable, PersistableEnum {
     case income, expense
     var id: Self { self }
     

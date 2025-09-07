@@ -8,6 +8,25 @@ import Foundation
 import SwiftUI
 import SwiftData
 
+import RealmSwift
+
+class RealmTransaction: Object, ObjectKeyIdentifiable {
+    @Persisted(primaryKey: true) private var _id : ObjectId
+    @Persisted var title: String
+    @Persisted var type: TransactionType
+    @Persisted var amount: Double
+    @Persisted var date: Date
+    
+    convenience init(_id: ObjectId, title: String, type: TransactionType, amount: Double, date: Date) {
+        self.init()
+        self._id = _id
+        self.title = title
+        self.type = type
+        self.amount = amount
+        self.date = date
+    }
+}
+
 @Model class TransactionModel {
     
     var id = UUID()

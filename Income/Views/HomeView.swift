@@ -7,6 +7,7 @@
 import SwiftUI
 import CoreData
 import SwiftData
+import RealmSwift
 
 struct HomeView: View {
     
@@ -15,8 +16,14 @@ struct HomeView: View {
     @State private var transactionToEdit: Transaction?
     @State private var showSettings = false
     
+    // read CoreData
     @FetchRequest(sortDescriptors: []) var transactionsFetched : FetchedResults<TransactionItem>
+    
+    // read SwiftData
     @Query var Transactions : [TransactionModel]
+    
+    // read RealmData
+    @ObservedResults(RealmTransaction.self) private var transactionsRealm
     
     @Environment(\.managedObjectContext) private var viewContext
     
